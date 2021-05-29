@@ -14,10 +14,10 @@ body {
   box-sizing: border-box;
   text-align: left;
   width: 100%;
-padding-right: 15px;
-padding-left: 15px;
-margin-right: auto;
-margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .row {
@@ -50,7 +50,7 @@ img {
   height: 270px;
   margin: 0 auto;
   /* object-fit: cover; */
-  /* border-radius: 50%; */
+  border-radius: 50%;
   max-width: 100%; 
   display: block;
   box-sizing: border-box;
