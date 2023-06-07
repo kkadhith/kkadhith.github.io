@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville%7CMontserrat:400,700%7CRoboto%7CRoboto Mono&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;1,400&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Guess</title> -->
+</head>
+ <ul>
+  <li><a href="https://www.github.com/">Projects</a></li>
+  <li><a href="resume/resume.pdf" target="_blank">Resume</a></li>
+  <li><a href="blog/test.html">Blog</a></li>
+  <li><a href="https://www.github.com/kkadhith">GitHub</a></li>
+</ul> 
+
+
+<body>
+    <div class="container">
+        <div>
+          <!-- <div class="r"><IMG SRC="btsclip.gif"></div> -->
+          <IMG SRC="btsclip.gif">
+          <h1>Local Rate Limiting Using Android's Cache</h1>
+          <h2>Context</h2>
+          <p>A few months ago, I built a mobile app to generate images using stable diffusion (or DALLE in my case). Originally, I wrote an API using the open source model, but GPU's are expensive!
+            Instead, I decided to use the much cheaper OpenAI API. If you intend to build a production-grade app using a 3rd party API, you should almost definitely make your own middleware API to increase control and implement features like rate-limiting.||||
+            <br>
+            <br>
+            However, I did not want to do this--I expected my app to be used by maybe 3 people, so this would not be an issue. My app did gain some traction though, and I woke up one morning to find $14 in usage!
+            
+          </p>
+          <h2>Urgent Fix</h2>
+          <img src="img2.png">
+          <p>Android provides an interface called SharedPreferences which gives developers access to presistent key-value storage (a cache). By using this, we can restrict the amount of times a user can perform an action entirely client-side. 
+            <br>  
+            <br>
+            Any time a user generates an image, I logged it using SharedPreferences. If they generated images 10 times, the app detects this and tells them that they have reached their daily limit. When they generate an image for the first time (say 9am monday) they can generate up to `x` images until 9am on Tuesday. You can easily do this using a timer in Kotlin/Dart.
+            </p>
+          <!-- <h2>Here is a Title</h2> -->
+          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga deleniti nemo dicta modi porro ut nostrum inventore. Eveniet eius quasi ipsam. Dignissimos nesciunt consequuntur neque omnis dicta facilis ab! Suscipit aperiam quos sed, voluptatibus voluptatem dolore facere a nam autem rem totam mollitia nulla odio eveniet qui! Nulla expedita placeat alias commodi cum illum animi itaque, fugiat at consectetur earum doloribus culpa deleniti soluta illo blanditiis. Quibusdam minus rem velit unde, quod praesentium, corrupti facere, sunt molestiae sed adipisci odio repellendus at tenetur fugit! Cupiditate expedita asperiores libero harum quisquam, cum, non voluptatum neque doloribus, labore natus deleniti at totam.</p> -->
+
+        </div>
+      </div>
+</body>
+</html>
